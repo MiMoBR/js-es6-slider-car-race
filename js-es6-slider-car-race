@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title></title>
+
+		<style type="text/css">
+			pre {
+				border: 1px solid #999;
+				padding: 1rem;
+				background: #eee;
+			}
+			body {
+				padding: 1rem;
+			}
+			pre span {
+				display: inline-block;
+			}
+			#race {
+				tab-size: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="range" min="0" max="20" value="0" id="raceExampleSlider">
+
+		<pre id="race"><code>Race!
+								<span>🚕</span>
+				<span>🚙</span>
+													<span>🚗</span>
+		</code></pre>
+
+		<script type="text/javascript">
+			const raceExampleSlider = document.querySelector("#raceExampleSlider");
+
+			raceExampleSlider.addEventListener("input", () => {
+				document.querySelector("#race").style.tabSize = raceExampleSlider.value;
+			})
+		</script>
+	</body>
+</html>
